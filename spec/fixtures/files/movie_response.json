@@ -1,0 +1,12 @@
+{
+   "data":{
+      "id":"1",
+      "type":"movie",
+      "attributes":{
+         "title":"Pulp Fiction",
+         "plot":"The lives of two mob hit men, a boxer...",
+         "rating":8.9,
+         "poster":"/pulp_fiction.jpg"
+      }
+   }
+}
