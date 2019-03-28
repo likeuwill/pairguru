@@ -8,8 +8,7 @@ RSpec.describe Api::V2::MoviesController, type: :controller do
       get :index, format: :json
 
       expect(response).to be_successful
-      expect(response).to have_http_status(200)
-      expect(response_json.length).to eq(1)
+      expect(response).to have_http_status(:ok)
       expect(response_json[0].keys).to contain_exactly("genre", "id", "title")
       expect(response_json[0]["genre"].keys).to contain_exactly("id", "name", "number_of_movies")
       expect(response_json[0]["id"]).to eq(movie.id)
@@ -20,7 +19,7 @@ RSpec.describe Api::V2::MoviesController, type: :controller do
       get :show, params: { id: movie.id }, format: :json
 
       expect(response).to be_successful
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(:ok)
       expect(response_json.keys).to contain_exactly("genre", "id", "title")
       expect(response_json["genre"].keys).to contain_exactly("id", "name", "number_of_movies")
       expect(response_json["id"]).to eq(movie.id)
