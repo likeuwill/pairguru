@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe Connector::Movie do
-  subject { described_class.new("Star Wars V") }
+  subject { described_class.new("Pulp Fiction") }
 
   context "remote api response is valid", mock_response: true do
     it "responds with cover url" do
