@@ -2,12 +2,12 @@ source "https://rubygems.org"
 
 gem "rails", "5.2"
 
+gem 'active_model_serializers', '~> 0.10.0'
 gem "annotate"
 gem "bootstrap-sass"
 gem "devise"
 gem "draper"
 gem "haml-rails"
-gem "jb"
 gem "jquery-rails"
 gem "sass-rails"
 gem "sqlite3"
@@ -28,6 +28,7 @@ group :development do
 end
 
 group :development, :test do
+  gem "byebug"
   gem "capybara"
   gem "factory_bot_rails"
   gem "faker"
